@@ -1,0 +1,114 @@
+/* Estilo para el contenedor del buscador */
+.search-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: -70px;
+}
+
+.search-container input {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 16px;
+    border: 1px solid #444;
+    background-color: #555;
+    border-radius: 5px;
+    color: white;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.search-container input:focus {
+    background-color: #444;
+    outline: none;
+    border-color: #000000;
+}
+
+/* Paginación */
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    min-width: 40px;
+}
+
+/* Clase específica para la paginación */
+.pagination .page-button {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    min-width: 40px;
+}
+
+.pagination .page-button:hover {
+    background-color: #333;
+}
+
+.pagination .page-button.active {
+    border: 2px solid rgb(214, 214, 214); 
+    background-color: #222;
+    color: white;
+}
+
+.pagination .page-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    color: #aaa;
+}
+
+
+
+/* Estilo para la lista de libros */
+.index-books-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: start;
+    align-items: center;  
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .index-books-container {
+        gap: 15px;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .books-container {
+        justify-content: center !important;
+    }
+
+    .search-container input {
+        width: 70%;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .pagination .page-button {
+        padding: 7px 8px;
+        font-size: 14px;
+        min-width: 5px;
+    }
+}
