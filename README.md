@@ -65,6 +65,6 @@
 
 ## 📩 Contacto
 
-🖥️ Desarrollado por Javier López Padilla
-📧 lopezpadillaj03@gmail.com
-📍 Úbeda, Jaén - España
+- 🖥️ Desarrollado por Javier López Padilla
+- 📧 lopezpadillaj03@gmail.com
+- 📍 Úbeda, Jaén - España
