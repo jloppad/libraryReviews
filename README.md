@@ -47,19 +47,19 @@
 
 - Login
 
-![login](./screenshots/login.png)
+![login](./public/screenshots/login.png)
 
 - Home
 
-![home](./screenshots/home.png)
+![home](./public/screenshots/home.png)
 
 - Review
 
-![review](./screenshots/review.png)
+![review](./public/screenshots/review.png)
 
 - Create
 
-![create](./screenshots/create.png)
+![create](./public/screenshots/create.png)
 
 ---
 
