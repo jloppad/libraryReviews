@@ -1,6 +1,8 @@
 import { Navigate, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Quantum } from 'ldrs/react'
+import 'ldrs/react/Quantum.css'
 
 export default function PrivateRoute({ children }) {
     const location = useLocation();
@@ -35,7 +37,17 @@ export default function PrivateRoute({ children }) {
             });
     }, [location.pathname]);
 
-    if (loading) return <div>Loading...</div>;
+    if (loading) {
+        return (
+                <p className="loading">
+                    <Quantum
+                        size="45"
+                        speed="1.75"
+                        color="white" 
+                    />
+                </p>
+        );
+    }
 
     return isAuthorized ? children : <Navigate to="/login" replace />;
 }
