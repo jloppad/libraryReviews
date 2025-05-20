@@ -6,6 +6,8 @@ import Search from "../components/search";
 import Pagination from "../components/pagination";
 import "../styles/review.css";
 import { motion, AnimatePresence } from "framer-motion";
+import { Quantum } from 'ldrs/react'
+import 'ldrs/react/Quantum.css'
 
 const getInitialLimit = () => (window.innerWidth <= 768 ? 4 : 5);
 
@@ -70,7 +72,19 @@ export default function Review() {
         setPage(newPage);
     };
 
-    if (loading) return <Layout>Loading...</Layout>;
+    if (loading) {
+        return (
+            <Layout>
+                <p className="loading">
+                    <Quantum
+                        size="45"
+                        speed="1.75"
+                        color="white" 
+                    />
+                </p>
+            </Layout>
+        );
+    }
     if (error) return <Layout>{error}</Layout>;
 
     return (

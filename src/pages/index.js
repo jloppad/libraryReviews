@@ -6,6 +6,8 @@ import Search from "../components/search";
 import Pagination from "../components/pagination";
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles/index.css";
+import { Quantum } from 'ldrs/react'
+import 'ldrs/react/Quantum.css'
 
 const getInitialLimit = () => (window.innerWidth <= 768 ? 10 : 15);
 
@@ -63,7 +65,19 @@ export default function Index() {
         setPage(newPage);
     };
 
-    if (loading) return <Layout>Loading...</Layout>;
+    if (loading) {
+        return (
+            <Layout>
+                <p className="loading">
+                    <Quantum
+                        size="45"
+                        speed="1.75"
+                        color="white" 
+                    />
+                </p>
+            </Layout>
+        );
+    }
     if (error) return <Layout>{error}</Layout>;
 
     return (

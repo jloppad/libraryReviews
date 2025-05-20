@@ -5,6 +5,8 @@ import { useState, useEffect, useCallback } from "react";
 import BookDetail from "../components/bookDetail";
 import Comments from "../components/comments";
 import "../styles/view.css";
+import { Quantum } from 'ldrs/react'
+import 'ldrs/react/Quantum.css'
 
 export default function View() {
     const { bookId } = useParams();
@@ -189,7 +191,19 @@ export default function View() {
         }
     }, [book, fetchImages]); 
 
-    if (loading) return <Layout><p className="loading">Loading...</p></Layout>;
+    if (loading) {
+        return (
+            <Layout>
+                <p className="loading">
+                    <Quantum
+                        size="45"
+                        speed="1.75"
+                        color="white" 
+                    />
+                </p>
+            </Layout>
+        );
+    }
     if (error) return <Layout><p className="error">{error}</p></Layout>;
     if (!book) return <Layout><p className="not-found">Book not found</p></Layout>;
 

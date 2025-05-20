@@ -3,6 +3,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Layout from "../components/layout";
 import BookForm from "../components/bookForm";
+import { Quantum } from 'ldrs/react'
+import 'ldrs/react/Quantum.css'
 
 export default function Edit() {
     const { bookId } = useParams();
@@ -158,7 +160,19 @@ export default function Edit() {
     };
     
 
-    if (loading) return <Layout><p className="loading">Loading...</p></Layout>;
+    if (loading) {
+        return (
+            <Layout>
+                <p className="loading">
+                    <Quantum
+                        size="45"
+                        speed="1.75"
+                        color="white" 
+                    />
+                </p>
+            </Layout>
+        );
+    }
     if (error) return <Layout><p className="error">{error}</p></Layout>;
 
     return (
